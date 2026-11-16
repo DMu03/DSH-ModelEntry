@@ -1,0 +1,19 @@
+# dependencies
+node_modules/
+.pnpm-store/
+
+# local state / logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+
+# editor / OS noise
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+
+# scratch
+tmp/
+*.tmp

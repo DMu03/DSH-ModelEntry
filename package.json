@@ -1,0 +1,61 @@
+{
+  "name": "dsh-models-entry",
+  "version": "1.0.0",
+  "description": "DSH add-on: a Models icon in the sidebar panel list that opens DSH's model management page (Settings → Models). Official plugin slots only; the application itself is never modified.",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "README.md",
+    "README.zh-CN.md",
+    "LICENSE",
+    "cordis.patch.yml"
+  ],
+  "scripts": {
+    "check": "node --check lib/client.js && node --check lib/index.js",
+    "test": "node test/client-selftest.mjs"
+  },
+  "keywords": [
+    "deepseek",
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "models",
+    "sidebar"
+  ],
+  "license": "MIT",
+  "author": "DMu03",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DMu03/DSH-ModelEntry.git"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [],
+      "external": []
+    },
+    "compatibility": {
+      "dsh": ">=0.2.1-rc.1 <0.3.0",
+      "profiles": [
+        "desktop",
+        "web"
+      ]
+    }
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "^4.0.1"
+  },
+  "engines": {
+    "node": ">=18",
+    "dsh": ">=0.2.1-rc.1 <0.3.0"
+  }
+}

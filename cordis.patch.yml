@@ -1,0 +1,9 @@
+# dsh-models-entry bundle patch
+#
+# 侧栏模型管理入口。host 半侧只占一个 Loader entry（无副作用），
+# 真正的界面在 client bundle 里：往官方槽位 sidebar.footer.action 注册一行
+# 「模型」，点击后打开设置外壳的模型分区。
+
+- insert:
+    - id: dsh-models-entry
+      name: "dsh-models-entry"
